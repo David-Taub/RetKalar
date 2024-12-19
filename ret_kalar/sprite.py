@@ -5,12 +5,6 @@ import numpy as np
 class Sprite:
     def __init__(self, program):
         self.ctx = moderngl.get_context()
-        # vertices = np.array([
-        #     -1.0, 1.0, 0.0, 0.0,  # topleft
-        #     1.0, 1.0, 1.0, 0.0,  # topright
-        #     -1.0, -1.0, 0.0, 1.0,  # bottomleft
-        #     1.0, -1.0, 1.0, 1.0,  # bottomright
-        # ])
         vertices = np.array([
             -1.0, 1.0,   # topleft
             1.0, 1.0,    # topright

@@ -17,6 +17,7 @@ class VisObject:
 class Scene:
     def __init__(self):
         self.ctx = moderngl.create_context()
+        self.ctx.enable(moderngl.BLEND)
         with open("shader.vert", "r") as f:
             vertex_shader = f.read()
         with open("shader.frag", "r") as f:

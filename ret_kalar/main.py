@@ -19,9 +19,8 @@ def main():
     pygame.init()
     pygame.display.set_mode((800, 800), flags=pygame.OPENGL | pygame.DOUBLEBUF, vsync=True)
     scene = Scene()
+
     clock = pygame.time.Clock()
-    print(scene.program._members)
-    time_uni = scene.program["time"]
     t = 0
     while True:
         t += 1
@@ -30,7 +29,7 @@ def main():
                 pygame.quit()
                 sys.exit()
         scene.render()
-        time_uni.value = t
+        scene.program["time"] = t
         pygame.display.flip()
         clock.tick(60)
 
